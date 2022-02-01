@@ -18,3 +18,4 @@ RUN apt-get update &&\
 WORKDIR /github/workspace
 
 ENTRYPOINT [ "pre-commit" ]
+CMD ["run", "--all-files"]
