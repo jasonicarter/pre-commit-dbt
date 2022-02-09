@@ -40,6 +40,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     add_dbt_cmd_args(parser)
     add_dbt_cmd_model_args(parser)
 
+    print("sys.argv")
+    print(sys.argv)
     print("argv")
     print(argv)
     print(parser)
