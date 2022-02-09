@@ -112,8 +112,6 @@ def paths_to_dbt_models(
     prefix: str = "",
     postfix: str = "",
 ) -> List[str]:
-    print("path_to_dbt_models"
-    print(paths)
     return [prefix + Path(path).stem + postfix for path in paths]
 
 
