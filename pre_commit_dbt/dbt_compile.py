@@ -42,6 +42,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     print("argv")
     print(argv)
+    print(parser)
     args = parser.parse_args(argv)
     print(args)
 
