@@ -43,6 +43,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     print("argv")
     print(argv)
     args = parser.parse_args(argv)
+    print(args)
 
     cmd = prepare_cmd(
         args.filenames,
