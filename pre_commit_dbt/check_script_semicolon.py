@@ -1,5 +1,6 @@
 import argparse
 import os
+import sys
 from typing import IO
 from typing import Optional
 from typing import Sequence
@@ -38,7 +39,8 @@ def check_semicolon(file_obj: IO[bytes], replace: bool = False) -> int:
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser()
     add_filenames_args(parser)
-
+    
+    print(sys.argv)
     args = parser.parse_args(argv)
     status_code = 0
 

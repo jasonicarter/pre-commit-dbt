@@ -1,4 +1,5 @@
 import argparse
+import sys
 from typing import List
 from typing import Optional
 from typing import Sequence
@@ -25,7 +26,12 @@ def prepare_cmd(
         dbt_models = models
     else:
         dbt_models = paths_to_dbt_models(paths, prefix, postfix)
+    print(cmd_flags)
+    print(models)
+    print(dbt_models)
+    print(cmd_flags)
     cmd = ["dbt", *global_flags, "compile", "-m", *dbt_models, *cmd_flags]
+    print(cmd)
     return cmd
 
 
@@ -35,7 +41,13 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     add_dbt_cmd_args(parser)
     add_dbt_cmd_model_args(parser)
 
+    print("sys.argv")
+    print(sys.argv)
+    print("argv")
+    print(argv)
+    print(parser)
     args = parser.parse_args(argv)
+    print(args)
 
     cmd = prepare_cmd(
         args.filenames,
